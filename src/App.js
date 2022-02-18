@@ -7,35 +7,60 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+  StackDivider
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
+import { Center } from "@chakra-ui/react"
+import { extendTheme } from "@chakra-ui/react"
+import "@fontsource/courgette"
+import "@fontsource/sawarabi-mincho";
+import { FloatingWhatsApp } from 'react-floating-whatsapp-button'
+import 'react-floating-whatsapp-button/dist/index.css'
+
+const theme = extendTheme({
+  fonts: {
+    heading: 'Courgette',
+    body: 'Sawarabi Mincho',
+  },
+  styles: {
+    global: {
+      // styles for the `body`
+      p: {
+        fontSize: 'md'
+      }
+    }
+  }
+})
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+      <VStack
+        // divider={<StackDivider borderColor="gray.200" />}
+        spacing={4}
+        align="stretch"
+        // bg='antiquewhite'
+        bgGradient='linear(to-r, yellow.100 0%, blue.100 30%, red.100 95%)'
+      >
+       <Header/>
+        <Menu/>
+        <Footer/>
+        <FloatingWhatsApp 
+          phone     ="+60132995307"
+          showPopup = {false}
+          zIndex    ={9999}
+          message   ="Hai, saya ingin membuat tempahan kek."
+          headerTitle="Farhani's Dessert"
+          autoOpenTimeout={5000}
+        />
+      </VStack>
+    </ChakraProvider
+      
+    >
   );
 }
 
