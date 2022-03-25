@@ -20,7 +20,7 @@ const Navbar = (props) => {
         <GridItem colSpan={1}>
           <VStack alignItems="flex-start" spacing="20px">
             <Heading fontSize="6xl" fontWeight="700" ml="20px">
-              Farhani's Dessert
+              Farhani's Sweettooth
             </Heading>
             {!isMobile &&
             <Button 
@@ -34,10 +34,9 @@ const Navbar = (props) => {
               <Image 
                 w ='50%' 
                 src={WhatsappButton} 
-                alt="Segun Adebayo"
-                _hover={{ "box-shadow": "5px 10px #888888"}}
+                alt="Farhani's Sweettooth"
+                _hover={{ scaleX: "1.1", scaleY: "1.1" }}
                 transform="auto" 
-                _hover={{ scaleX: "1.1", scaleY: "1.1" } }
                 />
             {/* //     </a> */}
             </Button>}
@@ -47,7 +46,7 @@ const Navbar = (props) => {
         <GridItem>
           <Flex>
             <Text as="i" marginTop={{lg: "30px", base: "5px"}} marginLeft="12px" marginRight="12px" fontSize='xl' fontWeight="400">
-              Preparing dessert delight for crazy <Text as='mark'>cheese cake </Text>fans! Available in lots of flavours according to your preferences
+              Preparing dessert delight for crazy <Text as='mark'>CHEESE CAKE </Text>fans! Available in lots of flavours according to your preferences
               <br/>
               Deboom Cheezilicious, Ultimate Cheesensation!
             </Text>
@@ -71,7 +70,7 @@ const Navbar = (props) => {
         <Feature
            icon={<Icon as={FcLike} w={10} h={10} />}
           title={'Flavours'}
-          text={
+          text={ 
             'Lots of choices that will meet your tastebuds! We are open for custom flavours that will met you appetite. The limit is your imagination'
           }
         />

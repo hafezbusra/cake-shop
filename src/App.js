@@ -54,7 +54,7 @@ function App() {
           showPopup = {false}
           zIndex    ={9999}
           message   ="Hai, saya ingin membuat tempahan kek."
-          headerTitle="Farhani's Dessert"
+          headerTitle="Farhani's Sweettooth"
           autoOpenTimeout={5000}
         />
       </VStack>

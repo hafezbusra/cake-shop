@@ -1,12 +1,10 @@
 import React from 'react'
+import { Box, Flex, Heading, Button, Center, Image, Stack, Text, useColorModeValue, Divider } from "@chakra-ui/react"
 
-import { Box, Flex, Heading, Button, Center, Image, Stack, Text, useColorModeValue } from "@chakra-ui/react"
+// const IMAGE =
+//   'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
 
-
-const IMAGE =
-  'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
-
-function Product() {
+  const Product = (props) => {
   //   return <Box display="flex" alignItems="center" justifyContent="space-between" >
   //   <Flex
   //     bg="#F9FAFB"
@@ -124,7 +122,6 @@ function Product() {
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: `url(${IMAGE})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -137,25 +134,20 @@ function Product() {
             rounded={'lg'}
             height={230}
             width={282}
+            boxShadow='2xl'
             objectFit={'cover'}
-            src={IMAGE}
+            src={props.image}
           />
         </Box>
-        <Stack pt={10} align={'center'}>
-          <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-            Brand
-          </Text>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-            Nice Chair, pink
+        <Stack pt={7} align={'center'}>
+          {props.title}
+          <Divider />
+          
+          <Text as='i' align={'center'}>{props.description}</Text>
+         
+          <Heading fontWeight={200} fontSize={'sm'}>
+            {props.trademark}
           </Heading>
-          <Stack direction={'row'} align={'center'}>
-            <Text fontWeight={800} fontSize={'xl'}>
-              $57
-            </Text>
-            <Text textDecoration={'line-through'} color={'gray.600'}>
-              $199
-            </Text>
-          </Stack>
         </Stack>
       </Box>
   );

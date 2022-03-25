@@ -12,7 +12,7 @@ const Feature = (props) => {
     <Stack>
       <Flex
         align={'center'}
-        justify={'center'}>
+        justify={'left'}>
         <Flex
           w={16}
           h={16}
@@ -26,7 +26,7 @@ const Feature = (props) => {
         </Flex>
         <Heading fontSize="xl" fontWeight={600} ml="15px">{props.title}</Heading>
       </Flex>
-      <Text color={'gray.600'}>{props.text}</Text>
+      <Text color={'gray.600'}><b>{props.text}</b></Text>
     </Stack>
 
     );

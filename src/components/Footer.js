@@ -27,7 +27,7 @@ const Footer = (props) => {
           rounded={'full'}
           cursor={'pointer'}
           as={'a'}
-          href={'https://www.instagram.com/farhanis_dessert/'}
+          href={'https://www.instagram.com/farhanis_sweettooth/'}
           display={'inline-flex'}
           alignItems={'center'}
           justifyContent={'center'}
@@ -39,7 +39,7 @@ const Footer = (props) => {
           <FaInstagram />
         </Button>
         </Stack>
-        <Text>© 2022 Farhani's Dessert. All rights reserved</Text>
+        <Text>© 2022 Farhani's Sweettooth. All rights reserved</Text>
       </Container>
     </Box>;
   
