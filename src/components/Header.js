@@ -20,21 +20,21 @@ const Navbar = (props) => {
         <GridItem colSpan={1}>
           <VStack alignItems="flex-start" spacing="20px">
             <Heading fontSize="6xl" fontWeight="700" ml="20px">
-              Farhani's Sweettooth
+              A Farhan's Sweettooth
             </Heading>
             {!isMobile &&
             <Button 
             colorScheme="green"
             size="md"
             onClick={() => {
-              window.open("https://wa.me/60132995307", "_blank");
+              window.open("https://wa.me/601159135307", "_blank");
             }}
            >
             {/* <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." target="_blank"> */}
               <Image 
                 w ='50%' 
                 src={WhatsappButton} 
-                alt="Farhani's Sweettooth"
+                alt="A Farhan's Sweettooth"
                 _hover={{ scaleX: "1.1", scaleY: "1.1" }}
                 transform="auto" 
                 />

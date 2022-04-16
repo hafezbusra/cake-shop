@@ -50,11 +50,11 @@ function App() {
         <Menu/>
         <Footer/>
         <FloatingWhatsApp 
-          phone     ="+60132995307"
+          phone     ="+601159135307"
           showPopup = {false}
           zIndex    ={9999}
           message   ="Hai, saya ingin membuat tempahan kek."
-          headerTitle="Farhani's Sweettooth"
+          headerTitle="A Farhan's Sweettooth"
           autoOpenTimeout={5000}
         />
       </VStack>
